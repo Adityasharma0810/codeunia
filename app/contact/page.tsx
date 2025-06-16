@@ -6,46 +6,16 @@ import { cn } from "@/lib/utils"
 import {
   Mail,
   Users,
-  MessageSquare,
   Globe,
   ArrowRight,
   Linkedin,
   Instagram,
-  Send,
-  Code,
-  BookOpen,
-  Trophy,
-  Heart,
 } from "lucide-react"
 import { motion } from "framer-motion"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
 import { SparklesCore } from "@/components/ui/sparkles"
+import { ContactForm } from "./contact-form"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    category: "",
-    message: "",
-  })
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
-  const supportCategories = [
-    { value: "technical", label: "Technical Support", icon: Code },
-    { value: "learning", label: "Learning Resources", icon: BookOpen },
-    { value: "events", label: "Events & Hackathons", icon: Trophy },
-    { value: "collaboration", label: "Collaboration", icon: Heart },
-    { value: "other", label: "Other", icon: MessageSquare },
-  ]
-
   return (
     <div className="flex flex-col overflow-hidden">
       {/* hero */}
@@ -137,94 +107,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Contact Form */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <Card className="border-0 shadow-lg card-hover">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                        <Send className="h-6 w-6 text-white" />
-                      </div>
-                      <CardTitle className="text-xl">Send us a Message</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <form className="space-y-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          placeholder="Your name"
-                          value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
-                          className="shadow-sm"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="your.email@example.com"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="shadow-sm"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="category">Category</Label>
-                        <Select
-                          value={formData.category}
-                          onValueChange={(value) => handleInputChange("category", value)}
-                        >
-                          <SelectTrigger className="shadow-sm">
-                            <SelectValue placeholder="Select a category" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {supportCategories.map((category) => (
-                              <SelectItem key={category.value} value={category.value}>
-                                <div className="flex items-center space-x-2">
-                                  <category.icon className="h-4 w-4" />
-                                  <span>{category.label}</span>
-                                </div>
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input
-                          id="subject"
-                          placeholder="Brief description of your inquiry"
-                          value={formData.subject}
-                          onChange={(e) => handleInputChange("subject", e.target.value)}
-                          className="shadow-sm"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Message</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Your message..."
-                          value={formData.message}
-                          onChange={(e) => handleInputChange("message", e.target.value)}
-                          rows={4}
-                          className="shadow-sm resize-none"
-                        />
-                      </div>
-                      <Button className="w-full glow-effect hover:scale-105 transition-all duration-300">
-                        Send Message
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <ContactForm />
 
               {/* Contact Info */}
               <motion.div
