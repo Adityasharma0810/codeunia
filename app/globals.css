@@ -150,4 +150,21 @@
     box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
   }
   /* Dark mode glowing effect */
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 6 - 2rem * 6));
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
 }
