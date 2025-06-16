@@ -505,23 +505,23 @@ export function HeroSection2() {
               ].map((stat, index) => (
                 <div 
                   key={index}
-                  className="text-center space-y-2 sm:space-y-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-all duration-500 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2"
+                  className="text-center space-y-2 sm:space-y-3 p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-background/80 backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-all duration-500 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2"
                   style={{ animationDelay: `${0.9 + index * 0.1}s` }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <div className="relative z-10">
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r ${stat.gradient} p-1.5 sm:p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r ${stat.gradient} p-2 sm:p-2.5 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                       <stat.icon className="w-full h-full text-white" />
                     </div>
                   </div>
                   
-                  <div className={`text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent relative z-10 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent relative z-10 group-hover:scale-110 transition-transform duration-300`}>
                     {stat.value}
                   </div>
                   
-                  <div className="text-xs text-muted-foreground relative z-10 group-hover:text-foreground/80 transition-colors duration-300">
+                  <div className="text-sm text-muted-foreground relative z-10 group-hover:text-foreground/80 transition-colors duration-300">
                     {stat.label}
                   </div>
                   
@@ -568,23 +568,23 @@ export function HeroSection2() {
             ].map((stat, index) => (
               <div 
                 key={index}
-                className="text-center space-y-2 sm:space-y-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-all duration-500 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2"
+                className="text-center space-y-2 sm:space-y-3 p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-background/80 backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-all duration-500 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2"
                 style={{ animationDelay: `${0.9 + index * 0.1}s` }}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="relative z-10">
-                  <div className={`w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r ${stat.gradient} p-1.5 sm:p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r ${stat.gradient} p-2 sm:p-2.5 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                     <stat.icon className="w-full h-full text-white" />
                   </div>
                 </div>
                 
-                <div className={`text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent relative z-10 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent relative z-10 group-hover:scale-110 transition-transform duration-300`}>
                   {stat.value}
                 </div>
                 
-                <div className="text-xs text-muted-foreground relative z-10 group-hover:text-foreground/80 transition-colors duration-300">
+                <div className="text-sm text-muted-foreground relative z-10 group-hover:text-foreground/80 transition-colors duration-300">
                   {stat.label}
                 </div>
                 
