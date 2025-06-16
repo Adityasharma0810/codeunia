@@ -409,7 +409,7 @@ export function HeroSection2() {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90 pt-20">
      
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/10"></div>
       
@@ -433,7 +433,7 @@ export function HeroSection2() {
          
           <div className="space-y-6 sm:space-y-8 lg:pr-8 w-full lg:order-1">
            
-            <div className="animate-fade-in text-center lg:text-left">
+            <div className="animate-fade-in text-center flex justify-right">
               <Badge 
                 variant="secondary" 
                 className="mb-4 px-3 py-2 sm:px-4 text-xs sm:text-sm font-medium shadow-xl bg-background/95 backdrop-blur-md border border-primary/20 relative overflow-hidden group hover:scale-105 transition-all duration-300"
