@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { SponsorsSection } from "./components/SponsorsSection";
 
 export default function AboutPage() {
   const features = [
@@ -365,8 +366,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Enhanced Team Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+       {/* Enhanced Team Section */}
+       <section className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.05),transparent_70%)]"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto space-y-12">
@@ -474,6 +475,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <SponsorsSection />
 
       {/* Vision & Roadmap Section */}
       <section className="py-20 relative overflow-hidden">
