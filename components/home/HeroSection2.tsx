@@ -431,7 +431,7 @@ export function HeroSection2() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-8 sm:py-12 lg:py-16">
           
          
-          <div className="space-y-6 sm:space-y-8 lg:pr-8 w-full order-2 lg:order-1">
+          <div className="space-y-6 sm:space-y-8 lg:pr-8 w-full lg:order-1">
            
             <div className="animate-fade-in text-center lg:text-left">
               <Badge 
@@ -495,8 +495,8 @@ export function HeroSection2() {
               </Button>
             </div>
 
-           
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-6 sm:pt-8 animate-fade-in relative z-10" style={{ animationDelay: '0.8s' }}>
+            {/* Desktop Stats (hidden on mobile) */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-6 sm:pt-8 animate-fade-in relative z-10 hidden lg:grid" style={{ animationDelay: '0.8s' }}>
               {[
                 { value: "50K+", label: "Active Developers", icon: Users, gradient: "from-blue-500 to-purple-600" },
                 { value: "1.2K+", label: "Projects Built", icon: Code, gradient: "from-green-500 to-blue-500" },
@@ -532,7 +532,7 @@ export function HeroSection2() {
           </div>
 
          
-          <div className="relative animate-fade-in w-full order-1 lg:order-2" style={{ animationDelay: '0.6s' }}>
+          <div className="relative animate-fade-in w-full lg:order-2" style={{ animationDelay: '0.6s' }}>
             <div className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-30 animate-pulse" />
               <div className="relative z-10 h-full">
@@ -556,6 +556,41 @@ export function HeroSection2() {
             <div className="absolute top-1/2 -right-3 sm:-right-6 bg-gradient-to-r from-purple-500 to-pink-500 p-2 sm:p-3 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '2s' }}>
               <Users className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
             </div>
+          </div>
+
+          {/* Mobile Stats (hidden on desktop) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-6 sm:pt-8 animate-fade-in relative z-10 lg:hidden order-3" style={{ animationDelay: '0.8s' }}>
+            {[
+              { value: "50K+", label: "Active Developers", icon: Users, gradient: "from-blue-500 to-purple-600" },
+              { value: "1.2K+", label: "Projects Built", icon: Code, gradient: "from-green-500 to-blue-500" },
+              { value: "200+", label: "Events Hosted", icon: Sparkles, gradient: "from-purple-500 to-pink-500" },
+              { value: "95%", label: "Success Rate", icon: Globe, gradient: "from-orange-500 to-red-500" }
+            ].map((stat, index) => (
+              <div 
+                key={index}
+                className="text-center space-y-2 sm:space-y-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-background/80 backdrop-blur-md border border-primary/20 hover:border-primary/40 transition-all duration-500 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2"
+                style={{ animationDelay: `${0.9 + index * 0.1}s` }}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative z-10">
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r ${stat.gradient} p-1.5 sm:p-2 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                    <stat.icon className="w-full h-full text-white" />
+                  </div>
+                </div>
+                
+                <div className={`text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent relative z-10 group-hover:scale-110 transition-transform duration-300`}>
+                  {stat.value}
+                </div>
+                
+                <div className="text-xs text-muted-foreground relative z-10 group-hover:text-foreground/80 transition-colors duration-300">
+                  {stat.label}
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-100%] transition-transform duration-1000" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
