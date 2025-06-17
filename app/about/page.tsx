@@ -23,6 +23,8 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { SponsorsSection } from "./components/SponsorsSection";
 import { TeamSection } from "./components/TeamSection";
 import { DevelopersSection } from "./components/DevelopersSection";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function AboutPage() {
   const features = [
@@ -102,6 +104,7 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col overflow-hidden">
+      <Header/>
       {/* Hero Section */}
       <section className="py-20 md:py-32 relative overflow-hidden">
         <div
@@ -712,6 +715,7 @@ export default function AboutPage() {
           </motion.div>
         </motion.div>
       </section>
+      <Footer/>
     </div>
   );
 }
