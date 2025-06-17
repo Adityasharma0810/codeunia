@@ -52,7 +52,7 @@ export default function SignInPage() {
 
       if (data?.user) {
         toast.success("Signed in successfully!")
-        router.push("/dashboard")
+        router.push("/protected")
         router.refresh()
       }
     } catch (error) {
