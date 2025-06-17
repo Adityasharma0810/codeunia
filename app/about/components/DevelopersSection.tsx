@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin } from "lucide-react";
 
-interface TeamMember {
+interface Developer {
   name: string;
   role: string;
   image: string;
@@ -17,122 +17,34 @@ interface TeamMember {
   };
 }
 
-export function TeamSection() {
-  const team: TeamMember[] = [
+export function DevelopersSection() {
+  const developers: Developer[] = [
     {
-      name: "Deepak Pandey",
-      role: "Founder",
+      name: "Akshay Kumar",
+      role: "Full Stack Developer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Leading the vision and direction of Codeunia, bringing innovation to coding education.",
-      badge: "Leadership",
+      description: "Architecting the core platform with modern web technologies and best practices.",
+      badge: "Full Stack",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/848deepak/"
+        github: "https://github.com/akshay0611",
+        linkedin: "https://www.linkedin.com/in/akshaykumar0611/"
       }
     },
     {
-      name: "Parisha Rani",
-      role: "Co-Founder and Operations Lead",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      description: "Driving operational excellence and strategic initiatives at Codeunia.",
-      badge: "Leadership",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/parishasharma93/"
-      }
-    },
-    {
-      name: "Aayush Bhardwaj",
-      role: "Strategy & Outreach Lead",
+      name: "Aditya Sharma",
+      role: "Frontend Developer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Developing strategic partnerships and expanding our reach in the coding education space.",
-      badge: "Strategy",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/aayushbhardwaj0001/"
-      }
-    },
-    {
-      name: "Anurag Shekhawat",
-      role: "Tech Lead",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Leading technical innovation and development at Codeunia.",
-      badge: "Technology",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/anurag-shekhawat-33214828b/"
-      }
-    },
-    {
-      name: "Nidhi Gupta",
-      role: "Resource and Finance Coordinator",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      description: "Managing resources and financial operations to ensure sustainable growth.",
-      badge: "Operations",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/nidhi-gupta15/"
-      }
-    },
-    {
-      name: "Tanvi Sharma",
-      role: "Marketing and Communications Lead",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      description: "Crafting our brand story and driving engagement through strategic communications.",
-      badge: "Marketing",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/tanvi-sharma-8a686a28a/"
-      }
-    },
-    {
-      name: "Sahil",
-      role: "Project Development Coordinator",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Coordinating project development and ensuring successful delivery of learning initiatives.",
-      badge: "Development",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/sahil4k00/"
-      }
-    },
-    {
-      name: "Mehakpreet Kaur",
-      role: "Designer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      description: "Creating beautiful and intuitive user experiences through thoughtful design.",
-      badge: "Design",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
-      }
-    },
-    {
-      name: "Ayush Chauhan",
-      role: "Video Editor",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Crafting engaging video content to enhance our learning experience.",
-      badge: "Content",
-      socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
-      }
-    },
-    {
-      name: "Spandan Sarkar",
-      role: "Video Editor",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Creating compelling visual stories to make learning more engaging.",
-      badge: "Content",
+      description: "Crafting beautiful and intuitive user interfaces with cutting-edge frontend technologies.",
+      badge: "Frontend",
       socials: {
         github: "https://github.com",
         linkedin: "https://linkedin.com"
       }
     }
-  ];
+  ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.05),transparent_70%)]"></div>
       <div className="container px-4 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto space-y-12">
@@ -149,21 +61,21 @@ export function TeamSection() {
                   <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </span>
                 <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
-                  <span>Meet Our Team</span>
+                  <span>The Minds Behind</span>
                 </div>
                 <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
               </button>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">
-              The <span className="gradient-text">People</span> Behind Codeunia
+              The <span className="gradient-text">Developers</span> Behind the Platform
             </h2>
             <p className="text-xl text-muted-foreground">
-              Passionate individuals dedicated to transforming coding education.
+              Meet the talented developers who brought Codeunia to life with their technical expertise and innovation.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
+            {developers.map((developer, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -178,26 +90,26 @@ export function TeamSection() {
                 <Card className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full group">
                   <div className="relative h-64 overflow-hidden">
                     <motion.img
-                      src={member.image}
-                      alt={member.name}
+                      src={developer.image}
+                      alt={developer.name}
                       className="w-full h-full object-cover"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-bold text-lg">{member.name}</h3>
-                      <p className="text-primary-foreground/80 text-sm">{member.role}</p>
+                      <h3 className="text-white font-bold text-lg">{developer.name}</h3>
+                      <p className="text-primary-foreground/80 text-sm">{developer.role}</p>
                     </div>
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <Badge className="bg-primary/90 text-white border-0">
-                        {member.badge}
+                        {developer.badge}
                       </Badge>
                       <div className="flex items-center space-x-2">
                         <motion.a
-                          href={member.socials.github}
+                          href={developer.socials.github}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -207,7 +119,7 @@ export function TeamSection() {
                           <Github className="w-4 h-4 text-primary" />
                         </motion.a>
                         <motion.a
-                          href={member.socials.linkedin}
+                          href={developer.socials.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -219,7 +131,7 @@ export function TeamSection() {
                       </div>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      {member.description}
+                      {developer.description}
                     </p>
                   </CardContent>
                 </Card>
