@@ -22,6 +22,7 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { SponsorsSection } from "./components/SponsorsSection";
 import { TeamSection } from "./components/TeamSection";
+import { DevelopersSection } from "./components/DevelopersSection";
 
 export default function AboutPage() {
   const features = [
@@ -327,6 +328,9 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <TeamSection />
+
+      {/* Developers Section */}
+      <DevelopersSection />
 
       <SponsorsSection />
 
