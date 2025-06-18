@@ -14,7 +14,7 @@ export default function Header() {
   const pathname = usePathname()
   const { user, loading } = useAuth()
 
-  // Helper function to check if a path is active
+  // helper function to check if a path is active
   const isActive = (path: string) => {
     if (path === "/") {
       return pathname === "/"
