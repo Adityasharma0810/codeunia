@@ -100,6 +100,26 @@
   }
   /* Moves the gradient background for a dynamic effect */
 
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  /* Fade in animation for text elements */
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  /* Grid pattern background */
+
+  .dark .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+  /* Dark mode grid pattern */
+
 
   @keyframes float {
     0%,
@@ -124,6 +144,18 @@
     }
   }
   /* animates a moving gradient background */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Fade in animation keyframes */
 
   .card-hover {
     transition: all 0.3s ease;
