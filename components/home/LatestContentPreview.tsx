@@ -47,7 +47,7 @@ export function LatestContentPreview() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <Badge variant="outline" className="px-4 py-2 hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary/15 to-purple-500/15 border-primary/30 backdrop-blur-sm shadow-lg">
+                  <Badge variant="outline" className="px-4 py-2 rounded-full  hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary/15 to-purple-500/15 border-primary/30 backdrop-blur-sm shadow-lg">
                     <Sparkles className="w-3 h-3 mr-2 animate-pulse" />
                     📚 Latest Articles
                   </Badge>
@@ -170,7 +170,7 @@ export function LatestContentPreview() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  <Badge variant="outline" className="px-4 py-2 hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary/15 to-purple-500/15 border-primary/30 backdrop-blur-sm shadow-lg">
+                  <Badge variant="outline" className="px-4 py-2 hover:scale-105 rounded-full  transition-all duration-300 bg-gradient-to-r from-primary/15 to-purple-500/15 border-primary/30 backdrop-blur-sm shadow-lg">
                     <Sparkles className="w-3 h-3 mr-2 animate-pulse" />
                     🎯 Upcoming Events
                   </Badge>
