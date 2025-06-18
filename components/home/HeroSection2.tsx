@@ -546,8 +546,8 @@ export function HeroSection2() {
               </div>
             </div>
             
-           
-            <div className="absolute top-5 sm:top-10 -right-2 sm:-right-4 bg-gradient-to-r from-primary to-purple-600 p-2 sm:p-3 rounded-full shadow-2xl animate-bounce">
+           {/* Commented out floating icons for now */}
+            {/* <div className="absolute top-5 sm:top-10 -right-2 sm:-right-4 bg-gradient-to-r from-primary to-purple-600 p-2 sm:p-3 rounded-full shadow-2xl animate-bounce">
               <Code className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
             </div>
             <div className="absolute bottom-10 sm:bottom-20 -left-2 sm:-left-4 bg-gradient-to-r from-green-500 to-blue-500 p-2 sm:p-3 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '1s' }}>
@@ -555,7 +555,7 @@ export function HeroSection2() {
             </div>
             <div className="absolute top-1/2 -right-3 sm:-right-6 bg-gradient-to-r from-purple-500 to-pink-500 p-2 sm:p-3 rounded-full shadow-2xl animate-bounce" style={{ animationDelay: '2s' }}>
               <Users className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Stats (hidden on desktop) */}
