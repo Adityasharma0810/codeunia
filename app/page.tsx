@@ -3,6 +3,7 @@
 import Header from "@/components/header";
 import { HeroSection2 } from "@/components/home/HeroSection2"
 import { FeaturesSection } from "@/components/home/FeaturesSection"
+import { CommunitySpotlight } from "@/components/home/CommunitySpotlight"
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="w-full max-w-[2000px]">
         <HeroSection2 />
         <FeaturesSection />
+        <CommunitySpotlight />
       </div>
       <Footer/>
     </main>
