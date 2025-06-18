@@ -5,11 +5,14 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { UserIcon } from "@/components/user-icon"
 import { Menu, X, Code2 } from "lucide-react"
+import { useAuth } from "@/lib/hooks/useAuth"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { user, loading } = useAuth()
 
   // Helper function to check if a path is active
   const isActive = (path: string) => {
@@ -68,17 +71,28 @@ export default function Header() {
         {/* desktop auth & theme - right */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <Button variant="ghost" asChild className="hover:scale-105 transition-transform">
-            <Link href="/auth/signin">Sign In</Link>
-          </Button>
-          <Button asChild className="glow-effect hover:scale-105 transition-all duration-300">
-            <Link href="/auth/signup">Sign Up</Link>
-          </Button>
+          {!loading && (
+            user ? (
+              <UserIcon />
+            ) : (
+              <>
+                <Button variant="ghost" asChild className="hover:scale-105 transition-transform">
+                  <Link href="/auth/signin">Sign In</Link>
+                </Button>
+                <Button asChild className="glow-effect hover:scale-105 transition-all duration-300">
+                  <Link href="/auth/signup">Sign Up</Link>
+                </Button>
+              </>
+            )
+          )}
         </div>
 
         {/* mobile menu button */}
         <div className="flex md:hidden items-center space-x-2">
           <ThemeToggle />
+          {!loading && user && (
+            <UserIcon />
+          )}
           <Button
             variant="ghost"
             size="icon"
@@ -111,14 +125,16 @@ export default function Header() {
                 )}
               </Link>
             ))}
-            <div className="flex space-x-2 pt-4">
-              <Button variant="ghost" asChild className="flex-1">
-                <Link href="/auth/signin">Sign In</Link>
-              </Button>
-              <Button asChild className="flex-1 glow-effect">
-                <Link href="/auth/signup">Sign Up</Link>
-              </Button>
-            </div>
+            {!loading && !user && (
+              <div className="flex space-x-2 pt-4">
+                <Button variant="ghost" asChild className="flex-1">
+                  <Link href="/auth/signin">Sign In</Link>
+                </Button>
+                <Button asChild className="flex-1 glow-effect">
+                  <Link href="/auth/signup">Sign Up</Link>
+                </Button>
+              </div>
+            )}
           </nav>
         </div>
       )}
