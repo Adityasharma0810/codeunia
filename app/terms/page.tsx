@@ -1,5 +1,7 @@
 "use client"
 
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -189,6 +191,7 @@ export default function TermsPage() {
 
   return (
     <div className="flex flex-col overflow-hidden">
+        <Header />
       {/* hero */}
       <section className="py-20 md:py-32 relative overflow-hidden">
         <div
@@ -598,6 +601,7 @@ export default function TermsPage() {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </div>
   )
 }

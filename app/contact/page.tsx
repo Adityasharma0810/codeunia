@@ -1,5 +1,7 @@
 "use client"
 
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -20,6 +22,7 @@ export default function ContactPage() {
   return (
       <div className="flex flex-col overflow-hidden">
           {/* hero */}
+            <Header />
           <section className="py-20 md:py-32 relative overflow-hidden">
               <div
                   className={cn(
@@ -503,6 +506,7 @@ export default function ContactPage() {
                   </div>
               </motion.div>
           </section>
+          <Footer />
       </div>
   );
 }
