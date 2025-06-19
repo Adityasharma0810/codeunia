@@ -1,5 +1,7 @@
 "use client"
 
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -42,7 +44,7 @@ const sections = [
       {
         subtitle: "Device Information",
         description:
-          "We collect information about the device and browser you use to access CodeUnia, such as your IP address, browser type, and operating system.",
+          "We collect information about the device and browser you use to access Codeunia, such as your IP address, browser type, and operating system.",
       },
       {
         subtitle: "Project Data",
@@ -190,6 +192,7 @@ const sections = [
 
   return (
       <div className="flex flex-col overflow-hidden">
+         <Header />
           {/* hero*/}
           <section className="py-20 md:py-32 relative overflow-hidden">
               {/* grid bg from acertinityui */}
@@ -878,6 +881,7 @@ const sections = [
                   </div>
               </motion.div>
           </section>
+        <Footer />
       </div>
   );
 }

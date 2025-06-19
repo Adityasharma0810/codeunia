@@ -1,5 +1,7 @@
 "use client"
 
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -188,6 +190,7 @@ export default function CookiesPage() {
   return (
     <div className="flex flex-col overflow-hidden">
       {/* hero*/}
+       <Header />
       <section className="py-20 md:py-32 relative overflow-hidden">
         {/* grid bg from acertinityui */}
         <div
@@ -600,6 +603,7 @@ export default function CookiesPage() {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </div>
   )
 }
