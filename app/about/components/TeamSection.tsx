@@ -26,7 +26,7 @@ export function TeamSection() {
       description: "Leading the vision and direction of Codeunia, bringing innovation to coding education.",
       badge: "Leadership",
       socials: {
-        github: "https://github.com",
+        github: "https://github.com/848deepak",
         linkedin: "https://www.linkedin.com/in/848deepak/"
       }
     },
@@ -37,7 +37,7 @@ export function TeamSection() {
       description: "Driving operational excellence and strategic initiatives at Codeunia.",
       badge: "Leadership",
       socials: {
-        github: "https://github.com",
+        github: "https://github.com/848Parisha",
         linkedin: "https://www.linkedin.com/in/parishasharma93/"
       }
     },
@@ -48,19 +48,19 @@ export function TeamSection() {
       description: "Developing strategic partnerships and expanding our reach in the coding education space.",
       badge: "Strategy",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/aayushbhardwaj0001/"
+        github: "https://github.com/AayuBhardwajj",
+        linkedin: "https://www.linkedin.com/in/aayushbhardwaj0001"
       }
     },
     {
       name: "Anurag Shekhawat",
-      role: "Tech Lead",
+      role: "Technical Lead",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       description: "Leading technical innovation and development at Codeunia.",
       badge: "Technology",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/anurag-shekhawat-33214828b/"
+        github: "https://github.com/anuragshekhawat1234",
+        linkedin: "https://www.linkedin.com/in/anurag-shekhawat-33214828b"
       }
     },
     {
@@ -70,7 +70,7 @@ export function TeamSection() {
       description: "Managing resources and financial operations to ensure sustainable growth.",
       badge: "Operations",
       socials: {
-        github: "https://github.com",
+        github: "https://github.com/NidhiiiGupta",
         linkedin: "https://www.linkedin.com/in/nidhi-gupta15/"
       }
     },
@@ -81,7 +81,7 @@ export function TeamSection() {
       description: "Crafting our brand story and driving engagement through strategic communications.",
       badge: "Marketing",
       socials: {
-        github: "https://github.com",
+        github: "https://github.com/tanvisharma154",
         linkedin: "https://www.linkedin.com/in/tanvi-sharma-8a686a28a/"
       }
     },
@@ -92,19 +92,19 @@ export function TeamSection() {
       description: "Coordinating project development and ensuring successful delivery of learning initiatives.",
       badge: "Development",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://www.linkedin.com/in/sahil4k00/"
+        github: "https://github.com/kaikon100x",
+        linkedin: "https://www.linkedin.com/in/sahil4k00"
       }
     },
     {
       name: "Mehakpreet Kaur",
-      role: "Designer",
+      role: "Design Lead",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
       description: "Creating beautiful and intuitive user experiences through thoughtful design.",
       badge: "Design",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        github: "https://github.com/Cybexpmehakpreetkaur",
+        linkedin: "https://www.linkedin.com/in/mehakpreet-kaur-769b08315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     },
     {
@@ -114,8 +114,8 @@ export function TeamSection() {
       description: "Crafting engaging video content to enhance our learning experience.",
       badge: "Content",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        github: "https://github.com/ayushmgg",
+        linkedin: "https://www.linkedin.com/in/ayush-chauh%C3%A0n-0065b1289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       }
     },
     {
@@ -125,8 +125,19 @@ export function TeamSection() {
       description: "Creating compelling visual stories to make learning more engaging.",
       badge: "Content",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        github: "https://github.com/spandan0002",
+        linkedin: "https://www.linkedin.com/in/spandan-sarkar-ab346b28a/"
+      }
+    },
+    {
+      name: "Keshav Datta",
+      role: "Community Operations Lead",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      description: "Coordinating and managing community operations to foster engagement and growth.",
+      badge: "Community",
+      socials: {
+        github: "https://github.com/Keshav-datta",
+        linkedin: "https://www.linkedin.com/in/keshav-datta-3b3623289"
       }
     }
   ];
