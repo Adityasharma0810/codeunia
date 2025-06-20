@@ -2,37 +2,39 @@
 
 import { motion } from "framer-motion";
 import { Handshake } from "lucide-react";
+import Image from "next/image";
 
 const sponsors = [
   {
-    name: "Google",
+    name: "Webytes",
     title: "Technology Partner",
-    logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+    logo: "/images/sponsors/webytes.png"
   },
-  {
-    name: "Microsoft",
-    title: "Cloud Partner",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
-  },
-  { name: "Amazon",
-    title: "Infrastructure Partner",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
-  },
-  {
-    name: "Meta",
-    title: "Innovation Partner",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg"
-  },
-  {
-    name: "GitHub",
-    title: "Development Partner",
-    logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-  },
-  {
-    name: "DigitalOcean",
-    title: "Hosting Partner",
-    logo: "https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Horizontal_Blue-3db19536.png"
-  }
+    {
+        name: "GeeksforGeeks",
+        title: "Cloud Infrastructure",
+        logo: "/images/sponsors/geekforgeeks.png"
+    },
+    {
+        name: "GeeksforGeeks Student Chapter- Chandigarh University",
+        title: "Version Control",
+        logo: "/images/sponsors/studentchaptercu.png"
+    },
+    {
+        name: "Alexa Developer Community- Chandigarh University",
+        title: "Hosting Solutions",
+        logo: "/images/sponsors/alexadevcommunity.png"
+    },
+    {
+        name: "Rotaract - Chandigarh University",
+        title: "Developer Tools",
+        logo: "/images/sponsors/rotaract.png"
+    },
+    {
+        name: "Codeunia",
+        title: "Web Development Platform",
+        logo: "/images/sponsors/codeunia.png"
+    },
 ];
 
 export function SponsorsSection() {
@@ -80,14 +82,16 @@ export function SponsorsSection() {
                           {sponsors.map((sponsor, idx) => (
                               <motion.div
                                   key={`first-${idx}`}
-                                  className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-6 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
+                                  className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-2 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
                                   whileHover={{ y: -5 }}
                               >
-                                  <div className="relative w-32 h-32 flex items-center justify-center">
-                                      <img
+                                  <div className="relative w-full h-48 flex items-center justify-center">
+                                      <Image
                                           src={sponsor.logo}
                                           alt={sponsor.name}
-                                          className="max-w-full max-h-full object-contain filter dark:invert"
+                                          fill
+                                          className="object-cover"
+                                          sizes="100vw"
                                       />
                                   </div>
                                   <div className="text-center">
@@ -104,14 +108,16 @@ export function SponsorsSection() {
                           {sponsors.map((sponsor, idx) => (
                               <motion.div
                                   key={`second-${idx}`}
-                                  className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-6 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
+                                  className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-2 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
                                   whileHover={{ y: -5 }}
                               >
-                                  <div className="relative w-32 h-32 flex items-center justify-center">
-                                      <img
+                                  <div className="relative w-full h-48 flex items-center justify-center">
+                                      <Image
                                           src={sponsor.logo}
                                           alt={sponsor.name}
-                                          className="max-w-full max-h-full object-contain filter dark:invert"
+                                          fill
+                                          className="object-cover"
+                                          sizes="100vw"
                                       />
                                   </div>
                                   <div className="text-center">
