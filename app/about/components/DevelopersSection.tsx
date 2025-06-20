@@ -37,8 +37,8 @@ export function DevelopersSection() {
       description: "Crafting beautiful and intuitive user interfaces with cutting-edge frontend technologies.",
       badge: "Frontend",
       socials: {
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        github: " https://github.com/Adityasharma0810",
+        linkedin: "https://www.linkedin.com/in/aditya-sharma-802a53350"
       }
     }
   ]
