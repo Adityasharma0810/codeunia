@@ -77,10 +77,10 @@ export default function Header() {
             ) : (
               <>
                 <Button variant="ghost" asChild className="hover:scale-105 transition-transform">
-                  <Link href="/auth/signin">Sign In</Link>
+                  <Link href={`/auth/signin?returnUrl=${encodeURIComponent(pathname)}`}>Sign In</Link>
                 </Button>
                 <Button asChild className="glow-effect hover:scale-105 transition-all duration-300">
-                  <Link href="/auth/signup">Sign Up</Link>
+                  <Link href={`/auth/signup?returnUrl=${encodeURIComponent(pathname)}`}>Sign Up</Link>
                 </Button>
               </>
             )
@@ -128,10 +128,10 @@ export default function Header() {
             {!loading && !user && (
               <div className="flex space-x-2 pt-4">
                 <Button variant="ghost" asChild className="flex-1">
-                  <Link href="/auth/signin">Sign In</Link>
+                  <Link href={`/auth/signin?returnUrl=${encodeURIComponent(pathname)}`}>Sign In</Link>
                 </Button>
                 <Button asChild className="flex-1 glow-effect">
-                  <Link href="/auth/signup">Sign Up</Link>
+                  <Link href={`/auth/signup?returnUrl=${encodeURIComponent(pathname)}`}>Sign Up</Link>
                 </Button>
               </div>
             )}

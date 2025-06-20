@@ -319,7 +319,7 @@ export default function BlogPage() {
                           </Button>
                         ) : (
                           <Button variant="ghost" size="sm" className="hover:scale-105 transition-transform bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20" asChild>
-                            <Link href="/auth/signin">
+                            <Link href={`/auth/signin?returnUrl=${encodeURIComponent('/blog')}`}>
                               Sign in to read <Lock className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
@@ -429,7 +429,7 @@ export default function BlogPage() {
                           </Button>
                         ) : (
                           <Button variant="ghost" size="sm" className="hover:scale-105 transition-transform bg-gradient-to-r from-primary/10 to-purple-500/10 hover:from-primary/20 hover:to-purple-500/20" asChild>
-                            <Link href="/auth/signin">
+                            <Link href={`/auth/signin?returnUrl=${encodeURIComponent('/blog')}`}>
                               Sign in to read <Lock className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
