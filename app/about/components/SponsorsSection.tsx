@@ -7,33 +7,28 @@ import Image from "next/image";
 const sponsors = [
   {
     name: "Webytes",
-    title: "Technology Partner",
+    title: "Innovation & Tech Consulting Partner",
     logo: "/images/sponsors/webytes.png"
   },
     {
         name: "GeeksforGeeks",
-        title: "Cloud Infrastructure",
+        title: "Knowledge & Learning Partner",
         logo: "/images/sponsors/geekforgeeks.png"
     },
     {
         name: "GeeksforGeeks Student Chapter- Chandigarh University",
-        title: "Version Control",
+        title: "Community Engagement Partner",
         logo: "/images/sponsors/studentchaptercu.png"
     },
     {
         name: "Alexa Developer Community- Chandigarh University",
-        title: "Hosting Solutions",
+        title: "Community Engagement Partner",
         logo: "/images/sponsors/alexadevcommunity.png"
     },
     {
         name: "Rotaract - Chandigarh University",
-        title: "Developer Tools",
+        title: "Youth Leadership Partner",
         logo: "/images/sponsors/rotaract.png"
-    },
-    {
-        name: "Codeunia",
-        title: "Web Development Platform",
-        logo: "/images/sponsors/codeunia.png"
     },
 ];
 
@@ -85,13 +80,16 @@ export function SponsorsSection() {
                                   className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-2 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
                                   whileHover={{ y: -5 }}
                               >
-                                  <div className="relative w-full h-48 flex items-center justify-center">
+                                  <div
+                                    className={
+                                      "relative w-full h-48 flex items-center justify-center"
+                                    }
+                                  >
                                       <Image
                                           src={sponsor.logo}
                                           alt={sponsor.name}
                                           fill
                                           className="object-cover"
-                                          sizes="100vw"
                                       />
                                   </div>
                                   <div className="text-center">
@@ -111,13 +109,16 @@ export function SponsorsSection() {
                                   className="flex-shrink-0 w-[300px] h-[200px] rounded-xl border border-primary/10 bg-background/50 backdrop-blur-sm p-2 flex flex-col items-center justify-center gap-4 hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
                                   whileHover={{ y: -5 }}
                               >
-                                  <div className="relative w-full h-48 flex items-center justify-center">
+                                  <div
+                                    className={
+                                      "relative w-full h-48 flex items-center justify-center"
+                                    }
+                                  >
                                       <Image
                                           src={sponsor.logo}
                                           alt={sponsor.name}
                                           fill
                                           className="object-cover"
-                                          sizes="100vw"
                                       />
                                   </div>
                                   <div className="text-center">
