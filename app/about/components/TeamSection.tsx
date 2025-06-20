@@ -53,6 +53,17 @@ export function TeamSection() {
       }
     },
     {
+      name: "Keshav Datta",
+      role: "Community Operations Lead",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      description: "Coordinating and managing community operations to foster engagement and growth.",
+      badge: "Community",
+      socials: {
+        github: "https://github.com/Keshav-datta",
+        linkedin: "https://www.linkedin.com/in/keshav-datta-3b3623289"
+      }
+    },
+    {
       name: "Anurag Shekhawat",
       role: "Technical Lead",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
@@ -129,17 +140,6 @@ export function TeamSection() {
         linkedin: "https://www.linkedin.com/in/spandan-sarkar-ab346b28a/"
       }
     },
-    {
-      name: "Keshav Datta",
-      role: "Community Operations Lead",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Coordinating and managing community operations to foster engagement and growth.",
-      badge: "Community",
-      socials: {
-        github: "https://github.com/Keshav-datta",
-        linkedin: "https://www.linkedin.com/in/keshav-datta-3b3623289"
-      }
-    }
   ];
 
   return (
