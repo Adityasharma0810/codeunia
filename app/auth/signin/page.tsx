@@ -1,8 +1,9 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -16,8 +17,9 @@ import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { AuthError } from "@supabase/supabase-js"
 
-export default function SignInPage() {
+function SignInForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
@@ -25,6 +27,9 @@ export default function SignInPage() {
     password: "",
     remember: false,
   })
+
+  // Get the return URL from query parameters
+  const returnUrl = searchParams.get('returnUrl') || '/protected'
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target
@@ -52,7 +57,8 @@ export default function SignInPage() {
 
       if (data?.user) {
         toast.success("Signed in successfully!")
-        router.push("/protected")
+        // Redirect to the return URL instead of hardcoded /protected
+        router.push(returnUrl)
         router.refresh()
       }
     } catch (error) {
@@ -284,7 +290,7 @@ export default function SignInPage() {
 
               <div className="text-center text-sm">
                 <span className="text-muted-foreground">Don&apos;t have an account? </span>
-                <Link href="/auth/signup" className="text-primary hover:underline font-medium">
+                <Link href={`/auth/signup?returnUrl=${encodeURIComponent(returnUrl)}`} className="text-primary hover:underline font-medium">
                   Sign up
                 </Link>
               </div>
@@ -304,5 +310,20 @@ export default function SignInPage() {
         </motion.div>
       </motion.div>
     </div>
+  )
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-muted/50">
+        <div className="relative">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-ping"></div>
+        </div>
+      </div>
+    }>
+      <SignInForm />
+    </Suspense>
   )
 }

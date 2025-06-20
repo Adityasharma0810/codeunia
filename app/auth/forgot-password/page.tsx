@@ -194,7 +194,7 @@ export default function ForgotPasswordPage() {
               <div className="text-center text-sm">
                 <span className="text-muted-foreground">Remember your password? </span>
                 <Link href="/auth/signin" className="text-primary hover:underline font-medium">
-                  Sign in
+                  Back to Sign In
                 </Link>
               </div>
             </CardContent>

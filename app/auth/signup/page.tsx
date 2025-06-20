@@ -2,8 +2,9 @@
 
 import type React from "react"
 import Typewriter from 'typewriter-effect';
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -17,8 +18,9 @@ import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { AuthError } from "@supabase/supabase-js"
 
-export default function SignUpPage() {
+function SignUpForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -29,6 +31,9 @@ export default function SignUpPage() {
     password: "",
     confirmPassword: "",
   })
+
+  // Get the return URL from query parameters
+  const returnUrl = searchParams.get('returnUrl') || '/protected'
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -66,7 +71,8 @@ export default function SignUpPage() {
 
       if (data?.user) {
         toast.success("Account created successfully! Please check your email for verification.")
-        router.push("/auth/signin")
+        // Pass the return URL to the signin page
+        router.push(`/auth/signin?returnUrl=${encodeURIComponent(returnUrl)}`)
       }
     } catch (error) {
       if (error instanceof AuthError) {
@@ -461,7 +467,7 @@ export default function SignUpPage() {
 
               <div className="text-center text-sm">
                 <span className="text-muted-foreground">Already have an account? </span>
-                <Link href="/auth/signin" className="text-primary hover:underline font-medium">
+                <Link href={`/auth/signin?returnUrl=${encodeURIComponent(returnUrl)}`} className="text-primary hover:underline font-medium">
                   Sign in
                 </Link>
               </div>
@@ -479,5 +485,20 @@ export default function SignUpPage() {
         </motion.div>
       </motion.div>
     </div>
+  )
+}
+
+export default function SignUpPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-muted/50">
+        <div className="relative">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-primary/20 animate-ping"></div>
+        </div>
+      </div>
+    }>
+      <SignUpForm />
+    </Suspense>
   )
 }
